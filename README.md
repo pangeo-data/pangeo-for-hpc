@@ -6,4 +6,4 @@ This repository collects information for specific HPC systems. If yours does not
 
 ## HPC Systems
 
-* [NASA Pleiades](systems/PLEIADES.md)
+* [NASA Pleiades](pleiades/README.md)
