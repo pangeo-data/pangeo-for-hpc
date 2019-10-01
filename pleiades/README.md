@@ -35,16 +35,12 @@ To run the actual notebook, we'll reserve a whole node. To reserve a dedicated I
 $ pbs_rfe --duration 1 --model ivy
 ```
 
-Note the IP of your reserved node and set it as an environment variable,
+Once you've successfully made your reservation and it has started, log in to your reserved node, making sure to again forward the 8888 port,
 
 ```shell
-$ export RFE_IP='...'
-```
-
-Once your reservation has been setup, log in to your reserved node, making sure to again forward the 8888 port,
-
-```shell
-$ ssh -L 8888:${RFE_IP}:8888
+$ RFE_HOST=(`pbs_rfe which`)
+$ RFE_IP=(`ssh $RFE_HOST hostname -i`)
+$ ssh -L 127.0.0.1:8888:${RFE_IP}:8888 $RFE_HOST
 ```
 
 ## Starting the Notebook
