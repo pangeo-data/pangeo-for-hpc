@@ -1,0 +1,10 @@
+name: pangeo
+dependencies:
+- distributed
+- dask
+- dask-jobqueue
+- nodejs
+- jupyterlab
+- jupyter-server-proxy
+- pip:
+  - dask_labextension

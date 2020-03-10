@@ -1,0 +1,8 @@
+jobqueue:
+    pbs:  # For NASA Pleiades Merope
+        cores: 12
+        processes: 1
+        memory: 48GB
+        resource-spec: "select=1:ncpus=12"
+        walltime: "00:20:00"
+        queue: normal
